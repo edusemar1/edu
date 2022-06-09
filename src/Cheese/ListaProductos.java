@@ -50,6 +50,10 @@ public class ListaProductos {
         if ((campo.replace(" ","").isEmpty()) || (campo == null))  return true; else return false;
     }
 
+    /**
+     * crear lista 
+     * @param nombre de la lista
+     */
     public ListaProductos(String nombre) {
     	if (parametro_vacio(nombre)) {
     		this.nombreLista = "noNamed";
@@ -58,10 +62,18 @@ public class ListaProductos {
     	this.nombreLista = nombre;
     	}
     }
+    /**
+     * devuelve el numero de productos
+     * @return numero de productos
+     */
     public int totalProductos(){
             return this.getNumProductos();
     }
-        
+    /**
+     * registrar un producto    
+     * @param prod a registrar
+     * @return producto registrado
+     */
     public Producto registraProducto(Producto prod) {
         
         if (listaP.containsKey(prod.getcode())) {
@@ -72,7 +84,11 @@ public class ListaProductos {
         this.setNumProductos(n);
         return prod;
     }
-
+    /**
+     * descarta producto
+     * @param codigo producto
+     * @return producto desscartado
+     */
     public Producto descartaProducto(String codigo) { 
         
         Producto prod = encuentraProducto(codigo);
@@ -83,7 +99,11 @@ public class ListaProductos {
         }
         return prod;
     }
-
+    /**
+     * encuentra producto
+     * @param codigo de producto
+     * @return producto
+     */
     public Producto encuentraProducto(String codigo) { 
         Producto prod = null;
         
