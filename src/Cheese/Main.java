@@ -1,8 +1,8 @@
 /*
-*	grupo  :
-*	alumno :
-*	n.exp. :
-*	fecha  :
+*	grupo  : GDAM 2-1
+*	alumno : Eduardo segura
+*	n.exp. : 7260
+*	fecha  : 9/6/2022
  */
 package Cheese;
 
