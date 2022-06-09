@@ -19,6 +19,13 @@ public class Main {
      public static void main(String[] args) {
     
          System.out.println("1º Gdam: Entornos de desarrollo");
+         Producto producto = new Producto("1928", "comida", 129, 3123);
+         Producto produco1 = new Producto("213", "juguete", 123, 234234);
+         ListaProductos lista = new ListaProductos("nombre");
+         lista.registraProducto(producto);
+         lista.registraProducto(produco1);
+         lista.encuentraProducto("1928").imprime_etiqueta();
+         lista.encuentraProducto("213").imprime_detalle();
 
      }
 }
